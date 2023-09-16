@@ -2,7 +2,8 @@ import { CarProps, FilterProps } from "@/types";
 
 export async function fetchCars(filters: FilterProps) {
     const { manufacturer, year, model, limit, fuel } = filters;
-    const API_KEY: string = process.env.API_KEY;
+    const API_KEY: string =
+        "9fab5669famsh57084834d89b3f8p1f3590jsnede6316867ea"; // dkm this api key is anyways free but I'm still an idiot yk can't make this api to work properly
     const headers = new Headers();
 
     headers.append("X-RapidAPI-Key", API_KEY);
