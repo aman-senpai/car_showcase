@@ -8,7 +8,7 @@ import { manufacturers } from "@/constants";
 
 const SearchManufacturer = ({
     manufacturer,
-    setManufacturer,
+    setManuFacturer,
 }: SearchManufacturerProps) => {
     const [query, setQuery] = useState("");
 
@@ -26,7 +26,7 @@ const SearchManufacturer = ({
         <div className="search-manufacturer">
             <Combobox
                 value={manufacturer}
-                onChange={setManufacturer}
+                onChange={setManuFacturer}
             >
                 <div className="relative w-full">
                     <Combobox.Button className="absolute top-[14px]">
@@ -40,9 +40,9 @@ const SearchManufacturer = ({
                     </Combobox.Button>
                     <Combobox.Input
                         className="search-manufacturer__input"
-                        placeholder="Volkswagen"
                         displayValue={(manufacturer: string) => manufacturer}
                         onChange={(e) => setQuery(e.target.value)}
+                        placeholder="Volkswagen"
                     />
                     <Transition
                         as={Fragment}
