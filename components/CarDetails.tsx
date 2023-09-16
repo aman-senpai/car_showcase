@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 
 import { CarProps } from "@/types";
+import { generateCarImageUrl } from "@/utils";
 
 interface CarDetailsPops {
     isOpen: boolean;
@@ -70,7 +71,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsPops) => {
                                     <div className="flex-1 flex flex-col gap-3">
                                         <div className="relative w-full h-20 bg-pattern bg-cover bg-center rounded-lg">
                                             <Image
-                                                src="/hero.png"
+                                                src={generateCarImageUrl(car)}
                                                 alt="car img"
                                                 fill
                                                 priority
@@ -80,7 +81,10 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsPops) => {
                                         <div className="flex gap-3">
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(
+                                                        car,
+                                                        "29"
+                                                    )}
                                                     alt="car img"
                                                     fill
                                                     priority
@@ -89,7 +93,10 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsPops) => {
                                             </div>
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(
+                                                        car,
+                                                        "33"
+                                                    )}
                                                     alt="car img"
                                                     fill
                                                     priority
@@ -98,7 +105,10 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsPops) => {
                                             </div>
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(
+                                                        car,
+                                                        "13"
+                                                    )}
                                                     alt="car img"
                                                     fill
                                                     priority
